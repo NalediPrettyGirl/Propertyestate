@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-xyz" crossorigin="anonymous">
+
+    <title>Property7</title>
+    <style>
+    
+            .btn span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+
+        .btn span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+
+        .btn:hover span {
+          padding-right: 25px;
+        }
+
+        .btn:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+
+        #carouselExampleAutoplaying .carousel-item img {
+        filter: brightness(30%); 
+    }
+    
+    #review .card:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;}
+
+    </style>
+</head>
+<body>
+
+    <!--navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+             <img src="property/web/logo.png" alt="logo" class="w-25" >
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#Popular">Popular</a>
+              </li>
+              
+            <li class="nav-item">
+               <a class="nav-link" href="#services">Services</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#Blogs">Blogs</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#review">Reviews</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#qna">Q&A</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link btn text-white bg-dark px-3 rounded-0" href="contact.html">Contacts</a>
+              </li>
+
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+
+<!--carosal-->
+<section>
+<div id="carouselExampleAutoplaying" class="carousel slide ">
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="property/houses/h2.jpg" class="d-block w-100" alt="img1">
+          <div class="carousel-caption carousel1">
+              <h1>EasyLife Property</h1>
+              <p>Unlocking Dreams, One Door at a Time! Your Key to Exceptional Living</p>
+            
+              <div class="mt-5 d-flex md-5">
+                  <input type="text" class="form-control search" id="floatingInput" placeholder="Search Easy ...">
+                  <button class="btn btn-light btn-sm justify-content-md-end mx-2 px-3">Search</button>
+              </div><br><br><br><br><br><br>
+          </div> 
+      </div>
+
+      <div class="carousel-item">
+          <img src="property/houses/h1.jpg" class="d-block w-100" alt="img2">
+          <div class="carousel-caption carousel1">
+              <h3>Easy Property</h3>
+              <p>Beyond Boundaries, Finding Your Space! Navigate the Journey to Your Perfect Home.</p>
+              <p><a href="#" class="btn btn-light btn-lg mt-3 rounded-0">View More</a></p><br><br><br><br><br><br>
+          </div>
+      </div>
+
+      <div class="carousel-item">
+          <img src="property/houses/h3.jpg" class="d-block w-100" alt="img3">
+          <div class="carousel-caption carousel1">
+              <h5>Comfy Property</h5>
+              <p>our Home, Your Haven! Discover, Explore, Thrive.</p>
+              <p><a href="#" class="btn btn-light btn-lg mt-3 rounded-0">View More</a></p><br><br><br><br><br><br>
+          </div>
+      </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+<!--popular-->
+
+   <section class="container" id="Popular" style="margin-top: 100px;">
+    <p class="pt-5">Popular Demand</p>
+    <div class="d-flex">
+        <h2>On Demand Residence</h2>
+        <h6 class="ms-auto">Explore All<span class="arrow-icon">&rarr;</span></h6>
+    </div>  
+
+    <div class ="row row-cols-1 row-cols-md-2 row-cols-md-3 g-4 mt-2">
+        <div class="col">
+            <div class="card border-o rounded-0">
+                <img src ="property/houses/h4.jpg" class="card-img-top rounded-0" alt="images">
+                <div class="card-body">
+                    <p class="card-text text-muted">Johannesburg , Sandton</p>
+
+                   <div class="d-flex my-2">
+                    <button class="btn btn-dark" style="vertical-align:middle"><span>Book For Viewing </span></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    
+
+   
+        <div class="col">
+            <div class="card border-o rounded-0">
+                <img src ="property/houses/h5.jpg" class="card-img-top rounded-0" alt="images">
+                <div class="card-body">
+                    <p class="card-text text-muted">Pretoria , Centurion</p>
+
+                   <div class="d-flex my-2">
+                    <button class="btn btn-dark" style="vertical-align:middle"><span>Book For Viewing </span></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    
+
+    
+        <div class="col">
+            <div class="card border-o rounded-0">
+                <img src ="property/houses/h6.jpg" class="card-img-top rounded-0" alt="images">
+                <div class="card-body">
+                    <p class="card-text text-muted">Johannesburg , Ferndale</p>
+
+                   <div class="d-flex my-2">
+                    <button class="btn btn-dark" style="vertical-align:middle"><span>Book For Viewing </span></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<!--logos-->
+
+
+<!--our serices-->
+
+<section class="container bg-light mt-5" id="services">
+    <div class="text-center">
+        <h2>Our Services</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-5 col-md-12 col-sm-12">
+          <img src="property/web/logo.png" alt="logo" class="w-75" >
+          </div>
+        
+        <div class="col-lg-7 col-md-12 col-sm-12 mt-2">
+            <div class="service-subheading text-center"><p>Comfort is Our Priority</p></div>
+            
+                <p>We believe in empowering our clients through education. We provide insights into market conditions, explain the buying or selling process, 
+                  and anticipate potential challenges, ensuring our clients are well-informed at every step.</p>
+                  <p>Personalized property searches based on your preferences and criteria.
+                    Expert guidance through property viewings and assessments.
+                    Skilled negotiation to secure the best terms for your property purchase.</p>
+              
+                <button class="btn btn-outline-dark" style="vertical-align:middle"><span>Learn More </span></button>
+            
+        </div>
+    </div>
+    <br>
+    <!--Agents-->
+    <div class="row mt-4">
+
+    <div class="service-subheading text-center"><p>Our Agents at Your Service</p></div>
+    
+    <div class="col-lg-4 col-md-12 col-sm-12 mt-2">
+    <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4 h-100">
+            <img src="property/agent/mf.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Mashudu Fhutu</h5>
+              <p class="card-text">With a background in my qualifications, I bring a wealth of knowledge to the table.</p>
+              <p class="card-text"><small class="text-body-secondary">7 Years Of Experience</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 col-sm-12 mt-2">
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4 h-100">
+                <img src="property/agent/ak.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Ayanda Khoza</h5>
+                  <p class="card-text"> If you are on the lookout for your perfect home or investment property, I am here to be your advocate.</p>
+                  <p class="card-text"><small class="text-body-secondary">4 Years Of Experience</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 mt-2">
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4 h-100">
+                    <img src="property/agent/ts.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Timothy Smith</h5>
+                      <p class="card-text">No two real estate journeys are the same. I understanding your specific goals and preferences.</p>
+                      <p class="card-text"><small class="text-body-secondary">2 Years Of Experience</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>
+
+</section>
+<!--blog-->
+
+<section class="container" id="Blogs" style="margin-top: 100px;">
+    <p class="pt-5">Blog</p>
+    <div class="d-flex">
+        <h2> What's on the Blog ? </h2>
+        <h6 class="ms-auto"> <button class="btn btn-dark rounded-0" style="vertical-align:middle"><span>View Articlees </span></button></h6>
+    </div>  
+
+    <div class="row mt-4">
+        <div class="col-lg-3 col-md-6 col-sm-12 ">
+            <div class="card border-o rounded-0">
+                <img src ="property/houses/h10.jpg" class="card-img-top rounded-0" alt="images">
+                <div class="card-body">
+                    <p class="card-text text-muted">Randburg , Rosebank</p>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur elit.
+                        ipsum illum ipsa? Non, ipsam?</p>
+
+                   <div class="d-flex my-2">
+                    <button class="btn btn-dark" style="vertical-align:middle"><span>Read More </span></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    
+
+   
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card border-o rounded-0">
+                <img src ="property/houses/h11.jpg" class="card-img-top rounded-0" alt="images">
+                <div class="card-body">
+                    <p class="card-text text-muted">Pretoria , Centurion</p>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur elit.
+                        ipsum illum ipsa? Non, ipsam?</p>
+
+                   <div class="d-flex my-2">
+                    <button class="btn btn-dark" style="vertical-align:middle"><span>Read More </span></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    
+
+    
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card border-o rounded-0">
+                <img src ="property/houses/h9.jpg" class="card-img-top rounded-0" alt="images">
+                <div class="card-body">
+                    <p class="card-text text-muted">Randburg , Ferndale</p>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur elit.
+                        ipsum illum ipsa? Non, ipsam?</p>
+
+                   <div class="d-flex my-2">
+                    <button class="btn btn-dark" style="vertical-align:middle"><span>Read More </span></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card border-o rounded-0">
+                <img src ="property/houses/h8.jpg" class="card-img-top rounded-0" alt="images">
+                <div class="card-body">
+                    <p class="card-text text-muted"> Free State, Bloemfontein </p>
+                    <p class="card-text text-muted">Lorem ipsum dolor sit amet consectetur elit.
+                        ipsum illum ipsa? Non, ipsam?</p>
+
+                   <div class="d-flex my-2">
+                    <button class="btn btn-dark" style="vertical-align:middle"><span>Read More </span></button>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--reviews-->
+ <section class="container bg-light" id="review" style="margin-top: 100px;">
+    <p class="pt-5">Reviews</p>
+    <div class="d-flex">
+        <h2>What Our Customers Say About Us?</h2>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="card bg-dark" style="width: 18rem;">
+                  <img src="property/clients/c1.jpg" class="card-img-top rounded-circle mx-auto mt-1" style="width: 150px; height: 125px;" alt="...">
+                  <div class="card-body">
+                    <h6 class="text-center text-white">Lokha Tyla</h6>
+                      <p class="card-text text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta inventore esse, porro minus ad qui vero aperiam. Ipsam autem recusandae ipsum suscipit assumenda repellat quaerat aperiam? Repudiandae error eos quasi.</p>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+              <div class="card bg-dark" style="width: 18rem;">
+                  <img src="property/clients/c2.jpg" class="card-img-top rounded-circle mx-auto mt-1" style="width: 150px; height: 125px;" alt="...">
+                  <div class="card-body">
+                    <h6 class="text-center text-white">Liyam Upaya</h6>
+                      <p class="card-text text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sed, explicabo molestiae soluta mollitia similique quia voluptate ipsum reiciendis vero eum debitis ullam alias, dolorum tempore ipsam! Quibusdam, ipsa natus?</p>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="col-lg-4 col-md-6 col-sm-12 ">
+              <div class="card bg-dark" style="width: 18rem;">
+                  <img src="property/clients/c1.jpg" class="card-img-top rounded-circle mx-auto mt-1" style="width: 150px; height: 125px;" alt="...">
+                  <div class="card-body">
+                    <h6 class="text-center text-white">Hendry Danger</h6>
+                      <p class="card-text text-white text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sed, explicabo molestiae soluta mollitia similique quia voluptate ipsum reiciendis vero eum debitis ullam alias, dolorum tempore ipsam! Quibusdam, ipsa natus?</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card bg-dark" style="width: 18rem;">
+                <img src="property/clients/c1.jpg" class="card-img-top rounded-circle mx-auto mt-1" style="width: 150px; height: 125px;" alt="...">
+                <div class="card-body">
+                  <h6 class="text-center text-white">Opatji Khanya</h6>
+                    <p class="card-text text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sed, explicabo molestiae soluta mollitia similique quia voluptate ipsum reiciendis vero eum debitis ullam alias, dolorum tempore ipsam! Quibusdam, ipsa natus?</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card bg-dark" style="width: 18rem;">
+                <img src="property/clients/c2.jpg" class="card-img-top rounded-circle mx-auto mt-1" style="width: 150px; height: 125px;" alt="...">
+                <div class="card-body">
+                  <h6 class="text-center text-white">KJaima Opao</h6>
+                    <p class="card-text text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sed, explicabo molestiae soluta mollitia similique quia voluptate ipsum reiciendis vero eum debitis ullam alias, dolorum tempore ipsam! Quibusdam, ipsa natus?</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card bg-dark" style="width: 18rem;">
+                <img src="property/clients/c2.jpg" class="card-img-top rounded-circle mx-auto mt-1" style="width: 150px; height: 125px;" alt="...">
+                <div class="card-body">
+                  <h6 class="text-center text-white">Kule Khajja</h6>
+                    <p class="card-text text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sed, explicabo molestiae soluta mollitia similique quia voluptate ipsum reiciendis vero eum debitis ullam alias, dolorum tempore ipsam! Quibusdam, ipsa natus?</p>
+                </div>
+            </div>
+        </div>
+      
+          
+      </div>
+
+</section>
+
+
+
+    <!--Q&A-->
+    <section class="container" id="qna" style="margin-top: 100px;">
+        <p class="pt-5">Q&A</p>
+        <div class="d-flex">
+            <h2>Frequently Asked Questions?</h2>
+            </div>
+            <div class ="row mt-5">
+            
+            <div class="col-lg-8 col-md-6 col-sm-12 ">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      What are the key features of the property?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p> The property features <br> [list key features]<br>and you can view additional photos on the property listing. The size of the property is [provide square footage], and the address is [property address].</p>
+                     </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Is financing or mortgage assistance provided?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>The property is listed for <br>[listing price]. Additional costs or fees include <br> <strong>[mention any applicable fees]</strong>. Payment options are [list available payment options], and financing or mortgage assistance can be discussed with our [financial team]. </div>
+                 </p> </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      What are the payment options available?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>The property is listed for<br> [listing price].<br> Additional costs or fees include [mention any applicable fees]. Payment options are [list available payment options], and financing or mortgage assistance can be discussed with our [financial team].</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 ">
+                <img src="property/web/qm.png" class="img-fluid w-50" alt="??????????????????????" >
+            </div>
+              </div>
+            </section>
+<footer>
+  
+    <div class ="container bg-dark mt-5" >
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 ">
+              
+                  <p class="mt-2 text-center text-white">Copyright © All rights Reserved 2024 Web Design by Naledi Motsoikha</p>
+                 <p class="text-center text-white"><b>DISCLAIMER!</b><br><i>This website is for demonstration and template use only. All information presented on this site is fictional and should not be considered as real or accurate. Any resemblance to actual events or persons is purely coincidental.</i></p>
+              
+            </div>
+        </div>
+    </div>
+  
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
